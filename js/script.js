@@ -48,13 +48,12 @@ const changeColor = () => {
 
 // function to change content inside html element
 const printQuote = () => {
-  document.getElementById('lQuote').addEventListener("click", () => {
     const sources = getRandomQuote(quotes);
     const pQuote = document.querySelector('.quote');
     const pSource = document.querySelector('.source');
     pQuote.textContent = sources.quote;
     pSource.textContent = sources.source;
-  });
 }
-//on click will change color
+//on click will change color, and change quote
 document.getElementById('lQuote').addEventListener("click", changeColor);
+document.getElementById('lQuote').addEventListener("click", printQuote);
